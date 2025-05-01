@@ -1,0 +1,127 @@
+.message-card {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 15px;
+    margin: 12px 0;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    max-width: 80%;
+    position: relative;
+    word-wrap: break-word;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.message-card:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.message-label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 8px;
+}
+
+.message-description {
+    font-size: 1rem;
+    color: #495057;
+    line-height: 1.5;
+}
+
+.message-card .message-label,
+.message-card .message-description {
+    margin-bottom: 8px;
+}
+
+.message-card .message-description {
+    font-size: 0.95rem;
+    color: #6c757d;
+    margin-bottom: 10px;
+}
+
+/* Styles for specific responses */
+.message-card .message-label.EmptyInput {
+    color: #dc3545;
+    /* Red for error */
+}
+
+.message-card .message-label.TooShort {
+    color: #ffc107;
+    /* Yellow for warning */
+}
+
+.message-card .message-label.NotFound {
+    color: #6c757d;
+    /* Grey for not found */
+}
+
+.message-card .message-label.Found {
+    color: #28a745;
+    /* Green for found results */
+}
+
+/* Chat bubble effect - Aligns message based on type */
+.message-card.sent {
+    background-color: #e1ffc7;
+    margin-left: auto;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.message-card.received {
+    background-color: #f1f1f1;
+    margin-right: auto;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+/* Add a little arrow effect for speech bubbles */
+.message-card.sent:before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    right: -12px;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-top: 12px solid #e1ffc7;
+}
+
+.message-card.received:before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: -12px;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-top: 12px solid #f1f1f1;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .message-card {
+        padding: 10px;
+        margin: 10px 0;
+        max-width: 95%;
+    }
+
+    .message-label {
+        font-size: 1.1rem;
+    }
+
+    .message-description {
+        font-size: 0.95rem;
+    }
+}
+
+/* Add fade-in animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
