@@ -1,0 +1,107 @@
+/* Chatbot Header */
+.chatbot-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 18px;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.chatbot-title {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.chatbot-close-button {
+    background: transparent;
+    border: none;
+    color: #ffffffcc;
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.chatbot-close-button:hover {
+    color: #ffffff;
+}
+
+/* Bot Avatar */
+.chatbot-bot-avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Container for input, menu button, and send button */
+.chatbot-popup .chatbot-input-container {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    background-color: #f7f7f7;
+    border-top: 1px solid #ccc;
+    border-radius: 25px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Menu Button Style */
+.chatbot-popup .chatbot-menu-btn {
+    background-color: transparent;
+    border: none;
+    color: #007bff;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.chatbot-popup .chatbot-menu-btn:hover {
+    background-color: #e0e0e0;
+}
+
+/* Input Box Style */
+.chatbot-popup .chatbot-input {
+    flex: 1;
+    padding: 10px 16px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 14px;
+    outline: none;
+    background-color: #fafafa;
+    transition: all 0.2s ease-in-out;
+}
+
+.chatbot-popup .chatbot-input:focus {
+    border-color: #007bff;
+    background-color: #fff;
+}
+
+/* Send Button Style */
+.chatbot-popup .chatbot-send-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 18px;
+    border-radius: 50%;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.chatbot-popup .chatbot-send-btn:hover {
+    background-color: #0056b3;
+}

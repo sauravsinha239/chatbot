@@ -1,0 +1,246 @@
+:root {
+  --primary-color: #2898ec;
+  --primary-dark: #0056b3;
+  --secondary-color: #a3f0b5;
+  --secondary-dark: #218838;
+  --background-color: #f8f9fa;
+  --light-gray: #e9ecef;
+  --medium-gray: #ddd;
+  --hover-light-gray: #d6d8db;
+  --error-color: #dc3545;
+  --success-background: #dff0d8;
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --transition-speed: 0.3s;
+}
+
+.options-container {
+  max-width: 320px;
+  font-family: var(--font-family);
+  margin: 20px;
+}
+
+.option-button {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color var(--transition-speed);
+  margin-bottom: 20px;
+  position: relative;
+}
+
+
+.option-button::after {
+  /* content: '';
+  position: absolute;
+  bottom: 100%; 
+  left: -19px;
+  border-width: 10px; 
+  border-style: solid;
+  border-color: transparent transparent var(--primary-color) transparent;  */
+
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  /* Position above the bubble */
+
+  border-width: 11px;
+  /* Size of the tail */
+  border-style: solid;
+  border-color: transparent transparent #2898ec transparent;
+  /* Color of the tail */
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-right: 8px solid #2898ec;
+
+  left: -19px;
+  top: 13px;
+}
+
+.options-links {
+  padding: 10px;
+}
+
+/* Individual option links styling */
+.option-link {
+  background-color: #2898ec;
+  padding: 12px 15px;
+  border-radius: 10px;
+  font-size: 1rem;
+  color: #fff;
+  font-weight: 500;
+  position: relative;
+  width: fit-content;
+  max-width: 80%;
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+
+
+.option-link::after {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  /* Position above the bubble */
+
+  border-width: 11px;
+  /* Size of the tail */
+  border-style: solid;
+  border-color: transparent transparent #2898ec transparent;
+  /* Color of the tail */
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-right: 8px solid #2898ec;
+
+  left: -19px;
+  top: 13px;
+}
+
+/* Hover Effect */
+.option-link:hover {
+  background-color: #1e7bc9;
+  /* Darker shade for hover feedback */
+}
+
+/* Submenu styling */
+.submenu {
+  background-color: #fff;
+  border-left: 4px solid var(--primary-color);
+  padding: 10px;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  /* More rounded */
+  animation: fadeIn var(--transition-speed) ease-out;
+}
+
+/* Sub-option links */
+.sub-option-link {
+  padding: 8px;
+  margin-bottom: 6px;
+  background-color: #f1f1f1;
+  border-radius: 6px;
+  /* Slightly rounded */
+  cursor: pointer;
+  transition: background-color var(--transition-speed);
+  font-size: 14px;
+}
+
+.sub-option-link:hover {
+  background-color: #e8e8e8;
+  /* Slightly darker on hover */
+}
+
+/* Description styles */
+.description {
+  float: right;
+  padding: 12px;
+  background-color: var(--success-background);
+  border-left: 4px solid var(--primary-dark);
+  border-radius: 8px;
+  /* Softer edges */
+  font-style: italic;
+  font-size: 14px;
+  animation: slideIn var(--transition-speed) ease-out;
+  margin-top: 10px;
+}
+
+/* Fixed button configuration at the bottom left */
+.fixed-bottom-left {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  height: 49px;
+  z-index: 10;
+  background: linear-gradient(135deg, #007bff, #6610f2);
+  color: white;
+  border: none;
+  padding: 5px 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  width: 17%;
+}
+
+/* .fixed-bottom-left:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+} */
+
+
+/* Error message styles */
+.error-message {
+  color: var(--error-color);
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.context-message {
+  background-color: #2898ec;
+  padding: 12px 15px;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #fff;
+  font-weight: 500;
+  position: relative;
+  width: fit-content;
+  max-width: 100%;
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.context-message::after {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  /* Position above the bubble */
+
+  border-width: 11px;
+  /* Size of the tail */
+  border-style: solid;
+  border-color: transparent transparent #2898ec transparent;
+  /* Color of the tail */
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-right: 8px solid #2898ec;
+
+  left: -19px;
+  top: 13px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-10px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width:600px) {
+  .fixed-bottom-left {
+    right: 100px;
+  }
+}
