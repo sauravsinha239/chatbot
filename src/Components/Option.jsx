@@ -95,9 +95,20 @@ const Options = () => {
 
             <div className="submenu">
               {contextMessage && <div className="context-message">{contextMessage}</div>}
+
               {activeDescription ? (
-                <p className="description">{activeDescription}</p>
+                <div className="description">
+                  {activeDescription
+                    .split('\n')
+                    .map((line, index) => {
+                      const trimmed = line.trim(); // Remove extra whitespace
+                      return trimmed ? (
+                        <p key={index}>{trimmed}</p>
+                      ) : null;
+                    })}
+                </div>
               ) : (
+
 
                 <>
                   {activeSubmenu &&

@@ -144,11 +144,22 @@
   background-color: var(--success-background);
   border-left: 4px solid var(--primary-dark);
   border-radius: 8px;
-  /* Softer edges */
-  font-style: italic;
+  /* white-space: pre-wrap; */
+  text-align: justify;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 14px;
   animation: slideIn var(--transition-speed) ease-out;
   margin-top: 10px;
+  line-height: 1.5;
+}
+
+.description p {
+  margin-bottom: 10px;
+}
+
+.description a {
+  color: #1e88e5;
+  text-decoration: underline;
 }
 
 /* Fixed button configuration at the bottom left */
